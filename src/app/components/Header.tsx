@@ -51,7 +51,9 @@ export function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-black text-gray-900 tracking-tight">
+              <h1 className={`text-2xl font-black tracking-tight transition-colors ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
                 Os Primaços
               </h1>
               <p className="text-xs text-[#FF6B00] font-semibold -mt-1">MOTOCROSS TEAM</p>
@@ -69,7 +71,9 @@ export function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-900 hover:text-[#FF6B00] font-semibold transition-colors relative group"
+                className={`font-semibold transition-colors relative group ${
+                  isScrolled ? 'text-gray-900 hover:text-[#FF6B00]' : 'text-white hover:text-[#FF6B00]'
+                }`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FF6B00] group-hover:w-full transition-all duration-300"></span>
@@ -83,9 +87,9 @@ export function Header() {
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
             )}
           </button>
         </div>
