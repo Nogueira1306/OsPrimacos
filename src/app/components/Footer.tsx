@@ -69,9 +69,6 @@ export function Footer() {
               ))}
 
               <div className="h-px w-16 bg-white/10 my-2"></div>
-              <a href="/cookies" className="text-gray-400 hover:text-[#FF6B00] transition-colors text-left font-medium">
-                Cookies
-              </a>
               <a href="/privacy" className="text-gray-400 hover:text-[#FF6B00] transition-colors text-left font-medium">
                 Privacidade
               </a>
@@ -115,9 +112,6 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4 text-sm">
-            <a href="/cookies" className="text-gray-400 hover:text-[#FF6B00] transition-colors">
-              Cookies
-            </a>
             <a href="/privacy" className="text-gray-400 hover:text-[#FF6B00] transition-colors">
               Privacidade
             </a>
