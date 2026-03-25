@@ -39,7 +39,8 @@ const CookieManager = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: "#222",
+        backgroundColor: "rgba(17, 17, 17, 0.96)",
+        borderTop: "1px solid rgba(255, 107, 0, 0.35)",
         color: "white",
         padding: "1rem 2rem",
         display: "flex",
@@ -54,14 +55,14 @@ const CookieManager = () => {
         {text.before}{" "}
         <a
           href="/cookies"
-          style={{ color: "#4ea8de", textDecoration: "underline" }}
+          style={{ color: "#FF6B00", textDecoration: "underline" }}
         >
           {text.cookies}
         </a>{" "}
         {text.between}{" "}
         <a
           href="/privacy"
-          style={{ color: "#4ea8de", textDecoration: "underline" }}
+          style={{ color: "#FF6B00", textDecoration: "underline" }}
         >
           {text.privacy}
         </a>{" "}
@@ -75,12 +76,12 @@ const CookieManager = () => {
           style={{
             marginRight: "1rem",
             padding: "0.5rem 1rem",
-            backgroundColor: acceptHover ? "#3b59d1" : "#1e40af",
-            border: "none",
+            backgroundColor: acceptHover ? "#FF8C3A" : "#FF6B00",
+            border: "1px solid rgba(255, 107, 0, 0.9)",
             borderRadius: "4px",
             color: "white",
             cursor: "pointer",
-            transition: "background-color 0.3s ease",
+            transition: "background-color 0.3s ease, border-color 0.3s ease",
           }}
         >
           {text.accept}
@@ -91,12 +92,12 @@ const CookieManager = () => {
           onMouseLeave={() => setDeclineHover(false)}
           style={{
             padding: "0.5rem 1rem",
-            backgroundColor: declineHover ? "#4a4a4a" : "#333333",
-            border: "none",
+            backgroundColor: declineHover ? "#2f2f2f" : "#1f1f1f",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
             borderRadius: "4px",
             color: "#ffffff",
             cursor: "pointer",
-            transition: "background-color 0.3s ease",
+            transition: "background-color 0.3s ease, border-color 0.3s ease",
           }}
         >
           {text.decline}
